@@ -1,8 +1,5 @@
 import React from 'react';
-// import FlipCoin from './components/FlipCoin'
 import FlipCoin from '../components/FlipCoin';
-// import "./App.css"
-// import "./App.css"
 
 const App=()=> {
   return (

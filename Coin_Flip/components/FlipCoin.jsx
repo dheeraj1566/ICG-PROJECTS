@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Coin from './Coin';
-// import './FlipCoin.css'; // Import external CSS
 import './FlipCoin.css'
 
 class FlipCoin extends Component {

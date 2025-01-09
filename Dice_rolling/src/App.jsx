@@ -1,4 +1,3 @@
-// App.js File
 import React from 'react';
 import RollDice from '../components/RollDice';
 import { library } from '@fortawesome/fontawesome-svg-core'

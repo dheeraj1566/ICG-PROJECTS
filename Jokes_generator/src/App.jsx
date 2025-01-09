@@ -1,4 +1,3 @@
-// import Joke from "./components/Joke";
 import Joke from "../components/Joke";
 
 function App() {
