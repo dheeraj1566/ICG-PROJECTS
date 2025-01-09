@@ -24,6 +24,7 @@ function App() {
 
     return (
         <div className="App">
+          <div className="block">
             <div className="search-box">
                 <label>
                     Search for any movies/shows:{" "}
@@ -36,9 +37,8 @@ function App() {
                 </button>
             </div>
 
-      // Using 'ReactPlayer' component to
-            // display the video
             <ReactPlayer url={videoURL} controls={true} />
+            </div>
         </div>
     );
 }

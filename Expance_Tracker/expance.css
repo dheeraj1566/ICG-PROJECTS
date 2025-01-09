@@ -1,0 +1,195 @@
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    margin: 2rem auto;
+    width: 80%;
+}
+#information, #info{
+    display: flex;
+    margin-bottom: 1rem;
+}
+#enterExpense{
+    margin-bottom: 1rem;
+}
+table th, table td{
+    border: 1px solid;
+    text-align: center;
+    padding: 0.5rem;
+} */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+::placeholder{
+    color: #000;
+    font-size: small;
+}
+input{
+    min-width: 300px;
+}
+#wrapper{
+    margin: 2rem auto;
+    width: 80%;
+}
+#wrapper > h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#information, #info{
+    display: flex;
+    margin-bottom: 1rem;
+}
+#info h3{
+    border: 1px solid;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+#enterExpense{
+    margin-bottom: 1rem;
+}
+table th, table td{
+    border: 1px solid;
+    text-align: center;
+    padding: 0.5rem;
+} */
+
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper styling */
+#wrapper {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Styling for the information section */
+#information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#totalDiv input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#info span {
+    font-weight: bold;
+}
+
+/* Styling for the expense entry form */
+#enterExpense {
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the expense tracker table */
+#expenseTracker {
+    margin-top: 20px;
+}
+
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#myTable th, #myTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable th {
+    background-color: #007bff;
+    color: white;
+}
+
+#myTable td {
+    background-color: #f9f9f9;
+}
+
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 15px;
+    }
+
+    .form input, .form button {
+        width: 100%;
+    }
+
+    #info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
