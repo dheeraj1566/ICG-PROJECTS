@@ -1,0 +1,54 @@
+/* FlipCoin.css
+
+.flip-coin {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.coin-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.flip-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.flip-button:hover {
+  background-color: #0056b3;
+}
+
+.results {
+  font-size: 16px;
+  color: #555;
+}
+
+.total-flips,
+.heads-count,
+.tails-count {
+  font-weight: bold;
+  color: #007bff;
+} */

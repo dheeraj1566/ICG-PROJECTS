@@ -70,15 +70,15 @@ class App extends Component {
     render() {
         return (
             <Container
-                className="mt-5 d-flex flex-column justify-content-center align-items-center"
-                style={{ minHeight: "100vh" }} // Ensures content is vertically centered
+                className="d-flex flex-column justify-content-center align-items-center"
+                style={{ minHeight: "100vh" }}
             >
                 <Row className="text-center mb-4">
                     <h2 className="font-weight-bold text-primary">TODO LIST</h2>
                 </Row>
 
-                <Row className="w-100">
-                    <Col md={{ span: 6 }}>
+                <Row className="w-100 justify-content-center">
+                    <Col md={8} lg={6}>
                         <InputGroup className="mb-3">
                             <FormControl
                                 placeholder="Add item..."
@@ -87,12 +87,14 @@ class App extends Component {
                                 onChange={(item) => this.updateInput(item.target.value)}
                                 aria-label="Add something"
                                 aria-describedby="basic-addon2"
+                                style={{ height: "50px" }}
                             />
                             <Button
                                 variant="success"
                                 size="lg"
                                 onClick={() => this.addItem()}
                                 className="ml-2"
+                                style={{ height: "50px" }}
                             >
                                 ADD
                             </Button>
@@ -100,8 +102,8 @@ class App extends Component {
                     </Col>
                 </Row>
 
-                <Row className="w-100">
-                    <Col md={{ span: 6 }}>
+                <Row className="w-100 justify-content-center">
+                    <Col md={8} lg={6}>
                         <ListGroup>
                             {/* map over and print items */}
                             {this.state.list.map((item, index) => {
