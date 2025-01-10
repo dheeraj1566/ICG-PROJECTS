@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="showSuccess">
+                <span id="icon"><i class="fa-solid fa-check" style="color: #63E6BE;"></i></span>
+                <h2>Password is Generated successfully
+                </h2>
+            </div>
+            <h1>Password Generator</h1>
+            <form action="#">
+                <input type="text" id="result" readonly> <br>
+                <label for="password"> Password Length</label>
+                <input type="number" id="password" name="password" min="1"><br>
+                <label for="uppercase"> Add Uppercase Letters</label>
+                <input type="checkbox" id="uppercase" name="uppercase"><br>
+                <label for="lowercase"> Add Lowercase Letters</label>
+                <input type="checkbox" id="lowercase" name="lowercase"><br>
+                <label for="number"> Include Numbers</label>
+                <input type="checkbox" id="number" name="number"><br>
+                <label for="symbole"> Include Symbols</label>
+                <input type="checkbox" id="symbole" name="symbole"><br>
+            </form>
+            <button id="createPassword">Generate Password</button>
+        </div>
+    </div>
+
+    <script>
+        let resultField = document.querySelector("#result");
+        let passwordLength = document.querySelector("#password");
+        let upperCase = document.querySelector("#uppercase");
+        let lowerCase = document.querySelector("#lowercase");
+        let number = document.querySelector("#number");
+        let symbole = document.querySelector("#symbole");
+        let generatePasswordButton = document.querySelector("#createPassword");
+        let showSuccessPopup = document.querySelector(".showSuccess");
+
+
+        let uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+        let numberChars = '0123456789';
+        let symbolChars = '!@#$%^&*()_+[]{}|;:,.<>?';
+
+
+        generatePasswordButton.addEventListener("click", function() {
+            resultField.value = '';
+            let password = "";
+            let charset = "";
+
+
+            let length = parseInt(passwordLength.value); // Convert the input value to an integer
+
+            if(isNaN(length) || length <= 0){
+                alert("Invaild length");
+                return;
+            };
+
+            if(upperCase.checked) charset += uppercaseChars; // Add uppercase characters if selected
+            if(lowerCase.checked) charset += lowercaseChars;
+            if(number.checked) charset += numberChars;
+            if(symbole.checked) charset += symbolChars;
+
+            if(charset === ""){
+                alert("Select at least one option");
+                return;
+            };
+
+
+            for(let i =0; i < length; i++){
+                let randomIndex = Math.floor(Math.random()* charset.length); // Get a random index
+                password += charset[randomIndex]; // Add the character at the random index to the password
+            };
+            resultField.value = password;
+
+            passwordCreatedPopup();
+        });
+        function passwordCreatedPopup(){
+              showSuccessPopup.style.display = "block";
+              setTimeout(()=>{
+                showSuccessPopup.style.display = "none";
+              },2000);
+        };
+    </script>
+</body>
+
+</html>
